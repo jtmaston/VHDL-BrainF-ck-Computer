@@ -1,5 +1,8 @@
 *.html
 Implementation*/
+*impl_*
+*impl*
+*.ldf
 *.xml
 .build_status
 .run_manager.ini
@@ -14,7 +17,8 @@ Implementation*/
 *.dmp
 ._Real_._Math_.vhd
 Clarity*
-Simulations*
+*Simulator*
+*Simulation*
 transcript
 *.naf
 *.lst
@@ -23,3 +27,4 @@ _*
 *.sym
 *.sort
 *.sty
+Memory Cell-old

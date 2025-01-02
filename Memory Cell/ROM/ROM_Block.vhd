@@ -40,7 +40,6 @@ begin
 			);
 	end generate;
 process (clk) is
-variable firstClock	   :boolean := true;
 begin
 	if(rising_edge(clk) ) then
 		enableDecoder <= '1';
