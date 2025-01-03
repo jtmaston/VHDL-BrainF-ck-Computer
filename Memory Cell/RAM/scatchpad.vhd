@@ -47,6 +47,4 @@ for i in 0 to initLen - 1 loop								-- writing to ram cells section
 		addrLines <= std_logic_vector(to_unsigned(i, 8));
 		wait on clk;
 	end loop;*/
-
-
-]*/
+] * /
