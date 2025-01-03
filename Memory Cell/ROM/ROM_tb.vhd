@@ -7,13 +7,17 @@ end entity;
 
 architecture behavior of testbench is
 
-  component ROM
-    port (
-      clk       : in  std_logic;
-      addrLines : in  std_logic_vector(7 downto 0);
-      dataLines : out std_logic_vector(7 downto 0)
-    );
-  end component;
+
+component ROM is
+  generic (
+    romText : string := "ROM Test"
+  );
+  port (
+    transact  : in  std_logic;
+    addrLines : in  std_logic_vector(7 downto 0);
+    dataLines : out std_logic_vector(7 downto 0)
+  );
+end component;
 
   signal clk       : std_logic := '0';
   signal addrLines : std_logic_vector(7 downto 0);
@@ -24,9 +28,9 @@ begin
   -- Please check and add your generic clause manually
   uut: ROM
     port map (
-      clk       => clk,
+      transact       => clk,
       addrLines => addrLines,
-      dataLines => dataLines
+      dataLines => dataLines   
     );
 
   clk <= not clk after 100 ps;
@@ -38,7 +42,7 @@ begin
     for i in 0 to 13 loop
       wait on clk;
       addrLines <= std_logic_vector(to_unsigned(i, 8));
-      -- wait until rising_edge(clk);
+	  wait on clk;
     end loop;
     wait;
 
