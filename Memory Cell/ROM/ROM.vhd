@@ -9,7 +9,8 @@ entity ROM is
   port (
     transact  : in  std_logic;
     addrLines : in  std_logic_vector(7 downto 0);
-    dataLines : out std_logic_vector(7 downto 0)
+    dataLines : out std_logic_vector(7 downto 0);
+    enable    : in    std_logic
   );
 end entity;
 
@@ -35,12 +36,14 @@ begin
     ); 
   end generate;
 
-  process (transact) is
-  begin
-    if (rising_edge(transact)) then
-      enableDecoder <= '1';
-    end if;
-
-  end process;
+  process (transact, enable) is
+    begin
+      if (enable = '1') then
+        enableDecoder <= '1';
+      else
+        enableDecoder <= '0';
+        dataLines <= (others => 'Z');
+      end if;
+    end process;
 
 end architecture;
