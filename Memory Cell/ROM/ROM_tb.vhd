@@ -7,7 +7,7 @@ end entity;
 
 architecture behavior of testbench is
 
-  component ROM_Block
+  component ROM
     port (
       clk       : in  std_logic;
       addrLines : in  std_logic_vector(7 downto 0);
@@ -22,7 +22,7 @@ architecture behavior of testbench is
 begin
 
   -- Please check and add your generic clause manually
-  uut: ROM_Block
+  uut: ROM
     port map (
       clk       => clk,
       addrLines => addrLines,

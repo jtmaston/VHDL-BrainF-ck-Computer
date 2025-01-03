@@ -16,7 +16,7 @@ architecture behavior of testbench is
   constant initLen  : positive := initData'LENGTH;
 
 begin
-  uut: entity work.RAM_Block(rtl) generic map (memoryCellCount => initLen) port map (
+  uut: entity work.RAM(rtl) generic map (memoryCellCount => initLen) port map (
     transact  => clk,
     addrLines => addrLines,
     dataLines => dataLines,

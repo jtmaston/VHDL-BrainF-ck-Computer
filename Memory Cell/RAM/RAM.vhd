@@ -2,7 +2,7 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
 
-entity RAM_Block is
+entity RAM is
 
   generic (
     memoryCellCount : positive := 14
@@ -16,7 +16,7 @@ entity RAM_Block is
   );
 end entity;
 
-architecture rtl of RAM_Block is
+architecture rtl of RAM is
   signal chipSelectLines : std_logic_vector(memoryCellCount - 1 downto 0) := (others => '0');
   signal enableDecoder   : std_logic                                      := '0';
 begin

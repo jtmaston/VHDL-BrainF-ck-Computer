@@ -25,7 +25,7 @@ begin
       enable  => enable
     );
 
-  ram_block_inst: entity work.RAM_Block
+  ram_block_inst: entity work.RAM
     generic map (
       memoryCellCount => registerCount
     )
