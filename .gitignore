@@ -29,3 +29,4 @@ _*
 *.sty
 Memory Cell-old
 config.v4p
+Documentation/html*
