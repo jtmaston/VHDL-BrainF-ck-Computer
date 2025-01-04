@@ -1,4 +1,4 @@
-/*! @mainpage Project overview / devlog
+/*! @mainpage 1. Project overview / devlog table of contents
     * @section introduction 1. Call me Ishmael...
     * Or something about taking on a Big Whale. When starting something like this, it's always a good idea to create an architecture, 
     * a starting point which you'll use in developing for the platform. In my case, I'm a big fan of diagrams, so, here goes...
@@ -38,6 +38,7 @@
         - This is a good plan to aid in debugging, being able to examine parts of the architecture live, as the "core" is running. I've chosen 
         I2C since it is crazy simple to implement, and allows for synchronization.
 
-    @section buildingMemory 2. Try and remember...
+    @section buildingMemory 2. Try and remember...  
+    The first task: build RAM and ROM cells. Find them here: @ref memoryTrip
 */
 

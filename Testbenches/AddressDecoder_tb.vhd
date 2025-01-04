@@ -34,6 +34,9 @@ begin
 
     tb: process
     begin
+        for i in 1 to 4 loop
+            wait on clock;
+        end loop;
         enableCell <= '1';
         wait until rising_edge(clock);
 
