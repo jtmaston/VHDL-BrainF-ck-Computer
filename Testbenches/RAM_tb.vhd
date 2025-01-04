@@ -7,7 +7,7 @@ end entity;
 
 architecture behavior of ram_tb is
   signal clk       : std_logic                    := '0';
-  signal addrLines : std_logic_vector(7 downto 0) := (others => 'Z');
+  signal addrLines : integer range 0 to 255       := 0;
   signal dataLines : std_logic_vector(7 downto 0) := (others => 'Z');
   signal workMode  : std_logic                    := '0';
   signal enableDec : std_logic                    := '0';
@@ -39,22 +39,17 @@ begin
     wait on clk;
 
     for i in 0 to initLen - 1 loop -- writing to ram cells section
-      addrLines <= std_logic_vector(to_unsigned(i, 8));
+      addrLines <= i;
       dataLines <= std_logic_vector(to_unsigned(character'pos(initData(i + 1)), 8));
-      wait on clk;
-      wait on clk;
+      wait until rising_edge(clk);
     end loop;
+    wait until falling_edge(clk);
 
     workMode <= '0';
-    enableDec <= '0';
-    dataLines <= (others => 'Z');
-
-    wait on clk;
-    enableDec <= '1';
 
     for i in 0 to initLen - 1 loop -- reading from ram cells section
-      addrLines <= std_logic_vector(to_unsigned(i, 8));
-      wait on clk;
+      addrLines <= i;
+      wait until rising_edge(clk);
     end loop;
     wait;
 

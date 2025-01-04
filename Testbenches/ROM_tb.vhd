@@ -14,18 +14,17 @@ architecture behavior of rom_tb is
         );
         port (
             transact  : in  std_logic;
-            addrLines : in  std_logic_vector(7 downto 0);
+            addrLines : in  integer range 0 to 255;
             dataLines : out std_logic_vector(7 downto 0)
         );
     end component;
 
     signal clk       : std_logic := '0';
-    signal addrLines : std_logic_vector(7 downto 0);
+    signal addrLines : integer range 0 to 255;
     signal dataLines : std_logic_vector(7 downto 0);
 
 begin
 
-  -- Please check and add your generic clause manually
     uut: ROM
     port map (
         transact       => clk,
@@ -40,10 +39,10 @@ begin
     tb: process
     begin
         for i in 0 to romText'length - 1 loop
-            wait until falling_edge(clk);
-            addrLines <= std_logic_vector(to_unsigned(i, 8));
+            addrLines <= i;
+            wait until rising_edge(clk);
         end loop;
-        wait until falling_edge(clk);
+        
         wait;
         
 
