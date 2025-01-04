@@ -19,19 +19,20 @@ end entity;
 architecture rtl of RAM_Cell is
   signal bits : std_logic_vector(cellSize - 1 downto 0) := initValue;
 begin
-  process (chipSel)
-  begin
-    if (chipSel = '1') then
-      --if (falling_edge(clk)) then
-      if (mode = '0') then
+  process (clk, chipSel)
+begin
+  if (chipSel = '1') then
+  if (rising_edge(clk)) then
+      if(mode = '0') then
         dataLines <= bits;
-      else
-        bits <= dataLines;
+      elsif (falling_edge(clk)) then
+          dataLines <= (others => 'Z');
+          bits <= dataLines;
       end if;
-      --end if;
-    else
-      dataLines <= (others => 'Z');
     end if;
-  end process;
+  else
+    dataLines <= (others => 'Z');
+  end if;
+end process;
 
 end architecture;
