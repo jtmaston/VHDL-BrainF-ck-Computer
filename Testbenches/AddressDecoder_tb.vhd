@@ -16,6 +16,7 @@ architecture behavior of addressdecoder_tb is
     signal addressLines       : integer range 0 to 255;                                 -- Address lines to set the mux output
     signal outputAddressLines : std_logic_vector(testCellCount - 1 downto 0) := (others => '0'); -- Sets tge
     signal ready                : std_logic := '0';
+    signal enableCell         : std_logic := '0';
 begin
     uut: entity work.AddressDecoder(rtl)
     generic map (
@@ -25,21 +26,27 @@ begin
         clock              => clock,
         addressLines       => addressLines,
         outputAddressLines => outputAddressLines,
-        ready               => ready
+        ready              => ready,
+        enable             => enableCell
     );
 
     clock <= not clock after 100 ps;
 
-  -- *** Test Bench - User Defined Section ***
-
     tb: process
     begin
-        for i in 0 to testCellCount - 1 loop
-            
+        enableCell <= '1';
+        wait until rising_edge(clock);
+
+        for i in 1 to testCellCount - 1 loop
             addressLines <= i;
-            wait until rising_edge(clock);
-            wait until falling_edge(clock);
+            for i in 1 to 3 loop
+                wait on clock;
+            end loop;
+            
         end loop;
+
+        wait until falling_edge(clock);
+        enableCell <= '0';
         
         wait;
     end process;

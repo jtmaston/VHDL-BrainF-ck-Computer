@@ -24,7 +24,8 @@ entity AddressDecoder is
       clock              : in  std_logic;                                                   --! Sync pulse: decoder switches lines on rising edge
       addressLines       : in  integer range 0 to 255;                                      --! Address value to the cell that needs routing
       outputAddressLines : out std_logic_vector(cellCount - 1 downto 0) := (others => '0');  --! Chip select lines to the different cells
-      ready              : out std_logic := '0'
+      ready              : out std_logic := '0';
+      enable             : in  std_logic := '0'
   );
     --! @example  AddressDecoder_tb.vhd
     --! An example implementation
@@ -32,17 +33,34 @@ end entity;
  
 
 architecture rtl of AddressDecoder is
-
+    
 begin
-  process (clock) is
+    process (clock, enable) is
+        variable edgeCounter : integer := 0;
   begin
-    if (rising_edge(clock)) then
-      outputAddressLines <= (others => '0');
-      outputAddressLines(addressLines) <= '1';
-      ready <= '0';
-    end if;
-    if(falling_edge(clock)) then
-        ready <= '1';
+    --if(rising_edge(clock) or falling_edge(clock)) then
+      if (enable = '1') then
+        if edgeCounter = 3 then
+        edgeCounter := 0;
+        end if;
+        
+        case edgeCounter is
+          when 0 =>
+            outputAddressLines <= (others => '0');
+            outputAddressLines(addressLines) <= '1';
+          when 1 =>
+            ready <= '1';
+          when 2 =>
+            ready <= '0';
+          when others =>
+            edgeCounter := 0;
+        end case;
+        edgeCounter := edgeCounter + 1;
+
+        end if;
+    --end if;
+    if(enable = '0') then
+      outputAddressLines <= (others => 'Z');
     end if;
   end process;
 end architecture;
