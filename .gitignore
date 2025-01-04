@@ -30,3 +30,5 @@ _*
 Memory Cell-old
 config.v4p
 Documentation/html*
+!Documentation/DoxygenLayout.xml
+.vscode
