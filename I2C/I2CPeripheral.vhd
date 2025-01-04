@@ -6,7 +6,7 @@ entity I2CPeripheral is
 
   generic (
     registerCount : positive := 4;
-    address       : positive := x"0x0f"
+    address       : positive := 4
   );
   port (
     clk    : in    std_logic;
@@ -17,6 +17,13 @@ entity I2CPeripheral is
 end entity;
 
 architecture rtl of I2CPeripheral is
+  signal addrLines      : std_logic_vector(7 downto 0);
+  signal dataLines      : std_logic_vector(7 downto 0);
+  signal ramAccessMode  : std_logic;
+  signal romTransaction : std_logic;
+  signal ramTransaction : std_logic;
+  signal romEnable      : std_logic;
+
 begin
   clockgenerator_inst: entity work.clockGenerator
     port map (
@@ -25,16 +32,26 @@ begin
       enable  => enable
     );
 
-  ram_block_inst: entity work.RAM
+  ram_inst: entity work.RAM
     generic map (
       memoryCellCount => registerCount
     )
     port map (
-      transact  => clk,
+      transact  => ramTransaction,
       addrLines => addrLines,
       dataLines => dataLines,
-      mode      => mode,
+      mode      => ramAccessMode,
       enable    => enable
+    );
+
+  rom_inst: entity work.ROM
+    generic map (
+      romText => "IDENT"
+    )
+    port map (
+      transact  => romTransaction,
+      addrLines => addrLines,
+      dataLines => dataLines
     );
 
 end architecture;

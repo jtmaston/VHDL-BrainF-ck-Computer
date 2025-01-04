@@ -15,7 +15,7 @@ entity ROM_Cell is
   );
 end entity;
 
-architecture rtl of ROM_Cell is
+architecture rtl of ROM_Cell is 
   signal bits : std_logic_vector(cellSize - 1 downto 0) := initValue;
 begin
   process (clk, chipSel)
@@ -29,4 +29,4 @@ begin
     end if;
   end process;
 
-end architecture;
+end architecture; 

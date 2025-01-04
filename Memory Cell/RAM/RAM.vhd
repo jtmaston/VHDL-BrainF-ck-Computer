@@ -1,3 +1,5 @@
+-- In order to cut down on 
+
 library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
@@ -20,7 +22,7 @@ architecture rtl of RAM is
   signal chipSelectLines : std_logic_vector(memoryCellCount - 1 downto 0) := (others => '0');
   signal enableDecoder   : std_logic                                      := '0';
 begin
-  decoder: entity work.RAM_Address_Decoder(rtl) generic map (cellCount => memoryCellCount) port map (
+  decoder: entity work.AddressDecoder(rtl) generic map (cellCount => memoryCellCount) port map (
     clock              => transact,
     addressLines       => addrLines,
     outputAddressLines => chipSelectLines,

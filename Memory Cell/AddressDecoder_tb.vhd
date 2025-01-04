@@ -2,27 +2,27 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
 
-entity ram_tb is
+entity addressdecoder_tb is
 end entity;
 
-architecture behavior of ram_tb is
-  signal clk       : std_logic                    := '0';
-  signal addrLines : std_logic_vector(7 downto 0) := (others => 'Z');
-  signal dataLines : std_logic_vector(7 downto 0) := (others => 'Z');
-  signal workMode  : std_logic                    := '0';
-  signal enableDec : std_logic                    := '0';
-
-  constant initData : string   := "RAM Cell testing";
-  constant initLen  : positive := initData'LENGTH;
+architecture behavior of addressdecoder_tb is
+  signal clock              : in std_logic;                                                    -- Clock pulse on which the mux does the switching
+  signal addressLines       : in std_logic_vector(7 downto 0);                                 -- Address lines to set the mux output
+  signal outputAddressLines : out std_logic_vector(cellCount - 1 downto 0) := (others => '0'); -- Sets tge
+  signal enable             : in std_logic constant initData : string      := "RAM Cell testing";
+  constant initLen : positive := initData'LENGTH;
 
 begin
-  uut: entity work.RAM(rtl) generic map (memoryCellCount => initLen) port map (
-    transact  => clk,
-    addrLines => addrLines,
-    dataLines => dataLines,
-    mode      => workMode,
-    enable    => enableDec
-  );
+  uut: entity work.AddressDecoder
+    generic map (
+      cellCount => cellCount
+    )
+    port map (
+      clock              => clock,
+      addressLines       => addressLines,
+      outputAddressLines => outputAddressLines,
+      enable             => enable
+    );
 
   clk <= not clk after 100 ps;
 

@@ -4,23 +4,23 @@ library ieee;
 
 entity ROM is
   generic (
-    romText : string := ('U', 'A', 'R', 'T', ' ', 'T', 'e', 's', 't', ' ', 'v', '0', '.', '1')
+    romText : string := "N/A"
   );
   port (
     transact  : in  std_logic;
     addrLines : in  std_logic_vector(7 downto 0);
-    dataLines : out std_logic_vector(7 downto 0);
-    enable    : in    std_logic
+    dataLines : out std_logic_vector(7 downto 0)
   );
 end entity;
 
 architecture rtl of ROM is
-  constant ROMCellCount : positive := romText'length; 
+  constant ROMCellCount : positive := romText'length;
   signal chipSelectLines : std_logic_vector(ROMCellCount - 1 downto 0) := (others => '0');
-  signal enableDecoder   : std_logic                                   := '0';
+  signal enableDecoder   : std_logic                                   := '1';
+  signal cellDataLines   : std_logic_vector(7 downto 0);
 
 begin
-  decoder: entity work.ROM_Address_Decoder(rtl) generic map (cellCount => ROMCellCount) port map (
+  decoder: entity work.AddressDecoder(rtl) generic map (cellCount => ROMCellCount) port map (
     clock              => transact,
     addressLines       => addrLines,
     outputAddressLines => chipSelectLines,
@@ -31,19 +31,19 @@ begin
     generic map (cellSize => 8, initValue => std_logic_vector(to_unsigned(character'pos(romText(i + 1)), 8)))
     port map (
         clk       => transact,
-        dataLines => dataLines,
+        dataLines => cellDataLines,
         chipSel   => chipSelectLines(i)
-    ); 
+    );
   end generate;
 
-  process (transact, enable) is
-    begin
-      if (enable = '1') then
-        enableDecoder <= '1';
-      else
-        enableDecoder <= '0';
-        dataLines <= (others => 'Z');
-      end if;
-    end process;
+  process (transact) is
+  begin
+    if rising_edge(transact) then
+      dataLines <= (others => 'Z');
+    end if;
+    if falling_edge(transact) then
+      dataLines <= cellDataLines;
+    end if;
+  end process;
 
 end architecture;

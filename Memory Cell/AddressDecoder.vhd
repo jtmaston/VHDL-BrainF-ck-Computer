@@ -3,7 +3,7 @@ library IEEE;
   use IEEE.std_logic_1164.all;
   use IEEE.numeric_std.all;
 
-entity RAM_Address_Decoder is
+entity AddressDecoder is
   generic (
     cellCount : positive := 16
   );
@@ -15,19 +15,17 @@ entity RAM_Address_Decoder is
   );
 end entity;
 
-architecture rtl of RAM_Address_Decoder is
+architecture rtl of AddressDecoder is
 
 begin
-  process (clock, enable) is
+  process (clock) is
   begin
-    if (enable = '1' and not rising_edge(enable) and not falling_edge(enable)) then
+    if (rising_edge(clock)) then
       outputAddressLines <= (others => '0');
       outputAddressLines(to_integer(unsigned(addressLines))) <= '1';
-    elsif (enable = '0' or falling_edge(enable)) then
-      outputAddressLines <= (others => '0');
     end if;
   end process;
-
 end architecture;
+
 
 
