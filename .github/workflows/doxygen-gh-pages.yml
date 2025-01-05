@@ -16,3 +16,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           config_file: Documentation/Doxyfile
           branch: gh-pages
+          folder: Documentation
