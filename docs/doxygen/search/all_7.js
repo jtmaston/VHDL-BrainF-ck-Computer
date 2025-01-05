@@ -7,5 +7,6 @@ var searchData=
   ['initdata_4',['initData',['../classram__tb_1_1behavior.html#a03aeedda0ace6e9fae644985809b2ea4',1,'ram_tb::behavior']]],
   ['initlen_5',['initLen',['../classram__tb_1_1behavior.html#ac67f75d7b76d1fb15846dade2a466946',1,'ram_tb::behavior']]],
   ['initvalue_6',['initValue',['../class_r_a_m___cell.html#a11f185e85bcd3d4318f77524a0eebc2b',1,'RAM_Cell.initValue'],['../class_r_o_m___cell.html#a11f185e85bcd3d4318f77524a0eebc2b',1,'ROM_Cell.initValue']]],
-  ['ishmael_7',['1. Call me Ishmael...',['../index.html#introduction',1,'']]]
+  ['is_20hard_7',['Decoding memories is hard!',['../mem.html#autotoc_md4',1,'']]],
+  ['ishmael_8',['1. Call me Ishmael...',['../arch.html#autotoc_md2',1,'']]]
 ];

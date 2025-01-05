@@ -2,21 +2,21 @@
 <area shape="rect" id="Node000000" href="$class_address_decoder.html" title=" " alt="" coords="5,56,124,83"/>
 <area shape="rect" id="Node000001" href="$class_r_a_m.html" title=" " alt="" coords="212,5,263,32"/>
 <area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="127,48,210,23,212,29,128,54"/>
-<area shape="rect" id="Node000004" href="$class_r_o_m.html" title=" " alt="" coords="211,157,264,184"/>
-<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="95,90,132,117,173,143,212,160,210,165,170,148,129,121,92,95"/>
 <area shape="rect" id="Node000009" href="$classaddressdecoder__tb.html" title=" " alt="" coords="172,56,303,83"/>
-<area shape="poly" id="edge7_Node000000_Node000009" title=" " alt="" coords="139,67,171,67,171,72,139,72"/>
-<area shape="rect" id="Node000002" href="$classram__tb.html" title=" " alt="" coords="370,5,432,32"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="279,16,370,16,370,21,279,21"/>
-<area shape="rect" id="Node000003" href="$class_i2_c_peripheral.html" title=" " alt="" coords="351,107,451,133"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="278,29,304,42,351,74,387,104,383,108,347,78,302,46,276,34"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="277,156,355,131,356,137,279,161"/>
-<area shape="rect" id="Node000005" href="$classrom__tb.html" title=" " alt="" coords="370,157,432,184"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="279,168,370,168,370,173,279,173"/>
-<area shape="rect" id="Node000007" href="$classclock_generator.html" title=" " alt="" coords="183,107,292,133"/>
-<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="307,117,351,117,351,123,307,123"/>
+<area shape="poly" id="edge4_Node000000_Node000009" title=" " alt="" coords="139,67,171,67,171,72,139,72"/>
+<area shape="rect" id="Node000003" href="$class_r_o_m.html" title=" " alt="" coords="211,157,264,184"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="95,90,132,117,173,143,212,160,210,165,170,148,129,121,92,95"/>
+<area shape="rect" id="Node000002" href="$class_i2_c_peripheral.html" title=" " alt="" coords="351,107,451,133"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="278,29,304,42,351,74,387,104,383,108,347,78,302,46,276,34"/>
+<area shape="rect" id="Node000007" href="$classram__tb.html" title=" " alt="" coords="370,5,432,32"/>
+<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="279,16,370,16,370,21,279,21"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="277,156,355,131,356,137,279,161"/>
+<area shape="rect" id="Node000004" href="$classrom__tb.html" title=" " alt="" coords="370,157,432,184"/>
+<area shape="poly" id="edge7_Node000003_Node000004" title=" " alt="" coords="279,168,370,168,370,173,279,173"/>
+<area shape="rect" id="Node000006" href="$classclock_generator.html" title=" " alt="" coords="183,107,292,133"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="307,117,351,117,351,123,307,123"/>
 <area shape="rect" id="Node000008" href="$class_r_a_m___cell.html" title=" " alt="" coords="24,5,105,32"/>
 <area shape="poly" id="edge9_Node000008_Node000001" title=" " alt="" coords="121,16,211,16,211,21,121,21"/>
-<area shape="rect" id="Node000006" href="$class_r_o_m___cell.html" title=" " alt="" coords="23,157,106,184"/>
-<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="121,168,211,168,211,173,121,173"/>
+<area shape="rect" id="Node000005" href="$class_r_o_m___cell.html" title=" " alt="" coords="23,157,106,184"/>
+<area shape="poly" id="edge10_Node000005_Node000003" title=" " alt="" coords="121,168,211,168,211,173,121,173"/>
 </map>

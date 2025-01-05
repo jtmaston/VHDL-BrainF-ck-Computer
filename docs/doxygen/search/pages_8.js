@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['table_20of_20contents_0',['1. Project overview / devlog table of contents',['../index.html',1,'']]],
-  ['through_20memory_1',['2. A trip through memory...',['../memory_trip.html',1,'']]],
-  ['trip_20through_20memory_2',['2. A trip through memory...',['../memory_trip.html',1,'']]]
+  ['vhdl_20brainf_20ck_20computer_0',['VHDL-BrainF-ck-Computer',['../md__c_1_2_users_2_axle_2_desktop_2_diamond_2_u_a_r_t_2_r_e_a_d_m_e.html',1,'']]]
 ];

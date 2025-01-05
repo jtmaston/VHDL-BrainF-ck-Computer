@@ -25,7 +25,20 @@
 var NAVTREE =
 [
   [ "Brainf*ck computer", "index.html", [
-    [ "1. Project overview / devlog table of contents", "index.html", "index" ],
+    [ "Project overview / devlog table of contents", "index.html", "index" ],
+    [ "Architecture", "arch.html", [
+      [ "Call me Ishmael...", "arch.html#autotoc_md2", null ]
+    ] ],
+    [ "Memory", "mem.html", [
+      [ "Decoding memories is hard!", "mem.html#autotoc_md4", [
+        [ "Architecture", "mem.html#autotoc_md5", null ],
+        [ "Decoder", "mem.html#autotoc_md6", null ]
+      ] ]
+    ] ],
+    [ "VHDL-BrainF-ck-Computer", "md__c_1_2_users_2_axle_2_desktop_2_diamond_2_u_a_r_t_2_r_e_a_d_m_e.html", [
+      [ "Prelude", "md__c_1_2_users_2_axle_2_desktop_2_diamond_2_u_a_r_t_2_r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "Devlog", "md__c_1_2_users_2_axle_2_desktop_2_diamond_2_u_a_r_t_2_r_e_a_d_m_e.html#autotoc_md9", null ]
+    ] ],
     [ "Design Units", "annotated.html", [
       [ "Design Unit List", "annotated.html", "annotated_dup" ],
       [ "Design Unit Index", "classes.html", null ],
@@ -48,5 +61,5 @@ var NAVTREEINDEX =
 "_address_decoder_8vhd.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';
