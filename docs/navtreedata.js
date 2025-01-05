@@ -27,12 +27,12 @@ var NAVTREE =
   [ "Brainf*ck computer", "index.html", [
     [ "Project overview / devlog table of contents", "index.html", "index" ],
     [ "Architecture", "archpage.html", [
-      [ "Call me Ishmael...", "archpage.html#autotoc_md2", null ]
+      [ "Call me Ishmael...", "archpage.html#autotoc_md0", null ]
     ] ],
     [ "Memory", "mempage.html", [
-      [ "Decoding memories is hard!", "mempage.html#autotoc_md4", [
-        [ "Architecture", "mempage.html#autotoc_md5", null ],
-        [ "Decoder", "mempage.html#autotoc_md6", null ]
+      [ "Decoding memories is hard!", "mempage.html#autotoc_md1", [
+        [ "Architecture", "mempage.html#autotoc_md2", null ],
+        [ "Decoder", "mempage.html#autotoc_md3", null ]
       ] ]
     ] ],
     [ "Design Units", "annotated.html", [
