@@ -1,6 +1,6 @@
-@page arch Architecture
+@page archpage Architecture
 
-# 1. Call me Ishmael...
+# Call me Ishmael...
 Or something about taking on a Big Whale. When starting something like this, it's always a good idea to create an architecture, 
 a starting point which you'll use in developing for the platform. In my case, I'm a big fan of diagrams, so, here goes...
 @image html diagram.svg
@@ -36,5 +36,10 @@ I2C debug interface:
     - This is a good plan to aid in debugging, being able to examine parts of the architecture live, as the "core" is running. I've chosen 
     I2C since it is crazy simple to implement, and allows for synchronization.
 
-
-
+<div class="section_buttons">
+ 
+| Previous                  |                              Next |
+|:--------------------------|----------------------------------:|
+| [Overview](@ref index)    | [Memory](@ref mempage)            |
+ 
+</div>

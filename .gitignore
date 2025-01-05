@@ -36,3 +36,4 @@ Documentation/html*
 *Build
 Documentation/Writerside/Writerside/images
 Documentation/Writerside
+!Documentation/*.html

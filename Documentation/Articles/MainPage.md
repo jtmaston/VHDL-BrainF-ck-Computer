@@ -40,3 +40,11 @@ follows:
 ## Devlog
 - You'll find the devlog on this project's Wiki. Please, do keep in mind that this is my first contact with VHDL (or any
 other hardware design language, for that matter), so things will be quite approximated.
+
+<div class="section_buttons">
+ 
+|                   |                              Next |
+|:------------------|----------------------------------:|
+|                   | [Architecture](@ref archpage)     |
+ 
+</div>

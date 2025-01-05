@@ -1,4 +1,4 @@
-@page mem Memory
+@page mempage Memory
 
 # Decoding memories is hard!
 
@@ -69,3 +69,11 @@ if I can make it more efficient.
 Not only does this signal look much better (it actually increments properly), you notice a "parallel" clock signal,
 pulsing on the "ready" line, which can be used to... [drumroll, please!] provide a clock cycle for a downstream RA(O)M
 cell, one where we are _sure_ that the routing is complete and data is ready. Huzzah, the decoder is ready!
+
+<div class="section_buttons">
+ 
+| Previous                      |                              Next |
+|:------------------------------|----------------------------------:|
+| [Architecture](@ref archpage) |                                   |
+ 
+</div>
