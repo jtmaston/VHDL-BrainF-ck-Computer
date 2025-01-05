@@ -1,0 +1,13 @@
+if (rising_edge(clock)) then
+      outputAddressLines <= (others => '0');
+      outputAddressLines(addressLines) <= '1';
+      if (enable = '1') then
+        ready <= '0';
+      end if;
+    end if;
+
+    if(falling_edge(clock)) then
+        if(enable = '1') then
+            ready <= '1';
+        end if;
+    end if;

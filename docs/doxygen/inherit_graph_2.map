@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classclock_generator.html" title=" " alt="" coords="136,56,245,83"/>
+<area shape="rect" id="Node000001" href="$class_i2_c_peripheral.html" title=" " alt="" coords="293,56,393,83"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="260,67,292,67,292,72,260,72"/>
+<area shape="rect" id="Node000004" href="$class_r_a_m___cell.html" title=" " alt="" coords="6,5,87,32"/>
+<area shape="rect" id="Node000002" href="$class_r_a_m.html" title=" " alt="" coords="165,5,216,32"/>
+<area shape="poly" id="edge2_Node000004_Node000002" title=" " alt="" coords="103,16,164,16,164,21,103,21"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="231,29,301,53,300,58,230,34"/>
+<area shape="rect" id="Node000003" href="$classram__tb.html" title=" " alt="" coords="312,5,374,32"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="232,16,312,16,312,21,232,21"/>
+<area shape="rect" id="Node000007" href="$class_r_o_m___cell.html" title=" " alt="" coords="5,107,88,133"/>
+<area shape="rect" id="Node000005" href="$class_r_o_m.html" title=" " alt="" coords="164,107,216,133"/>
+<area shape="poly" id="edge5_Node000007_Node000005" title=" " alt="" coords="103,117,164,117,164,123,103,123"/>
+<area shape="poly" id="edge6_Node000005_Node000001" title=" " alt="" coords="230,104,300,81,302,86,232,109"/>
+<area shape="rect" id="Node000006" href="$classrom__tb.html" title=" " alt="" coords="312,107,374,133"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="232,117,312,117,312,123,232,123"/>
+</map>

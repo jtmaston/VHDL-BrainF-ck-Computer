@@ -1,0 +1,16 @@
+<map id="I2CPeripheral" name="I2CPeripheral">
+<area shape="rect" id="Node000001" title=" " alt="" coords="114,155,214,181"/>
+<area shape="rect" id="Node000002" href="$classclock_generator.html" title=" " alt="" coords="5,80,115,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,113,147,152,144,156,89,118"/>
+<area shape="rect" id="Node000003" href="$class_r_a_m.html" title=" " alt="" coords="138,80,190,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,122,167,154,161,154,161,122"/>
+<area shape="rect" id="Node000004" href="$class_address_decoder.html" title="Address decoder entity." alt="" coords="142,5,260,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,47,173,81,168,78,186,45"/>
+<area shape="rect" id="Node000006" href="$class_r_o_m.html" title=" " alt="" coords="214,80,266,107"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="218,45,236,78,231,81,213,47"/>
+<area shape="rect" id="Node000005" href="$class_r_a_m___cell.html" title=" " alt="" coords="37,5,118,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="106,40,151,78,147,82,102,44"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="218,119,179,156,175,152,214,116"/>
+<area shape="rect" id="Node000007" href="$class_r_o_m___cell.html" title=" " alt="" coords="284,5,366,32"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="301,44,256,82,253,78,297,40"/>
+</map>

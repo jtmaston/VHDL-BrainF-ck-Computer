@@ -30,10 +30,6 @@ begin
 
   tb: process
   begin
-
-    wait until rising_edge(clk);
-    wait on clk;
-
     workMode <= '1';
     enableDec <= '1';
     wait on clk;
@@ -43,9 +39,19 @@ begin
       dataLines <= std_logic_vector(to_unsigned(character'pos(initData(i + 1)), 8));
       wait until rising_edge(clk);
     end loop;
-    wait until falling_edge(clk);
+    
+    dataLines <= (others => 'Z');
+    addrLines <= 0;
+    enableDec <='0';
+    workMode  <='0';
 
-    workMode <= '0';
+    wait on clk;
+    wait on clk;
+    wait on clk;
+
+    wait until falling_edge(clk);
+    enableDec <= '1';
+    wait on clk;
 
     for i in 0 to initLen - 1 loop -- reading from ram cells section
       addrLines <= i;

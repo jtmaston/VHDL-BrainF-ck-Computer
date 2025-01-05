@@ -26,7 +26,8 @@ begin
     clock              => transact,
     addressLines       => addrLines,
     outputAddressLines => chipSelectLines,
-    ready => readyTransact
+    ready => readyTransact,
+    enable => enable
   );
   memoryCells: for i in 0 to (memoryCellCount - 1) generate
     cell_i: entity work.RAM_Cell(rtl)
