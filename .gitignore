@@ -32,3 +32,6 @@ config.v4p
 Documentation/html*
 !Documentation/DoxygenLayout.xml
 .vscode
+*.idea
+*Build
+Documentation/Writerside/Writerside/images
