@@ -37,3 +37,4 @@ Documentation/html*
 Documentation/Writerside/Writerside/images
 Documentation/Writerside
 !Documentation/*.html
+docs
