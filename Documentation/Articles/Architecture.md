@@ -40,6 +40,6 @@ I2C debug interface:
  
 | Previous                  |                              Next |
 |:--------------------------|----------------------------------:|
-| [Overview](@ref index)    | [Memory](@ref mempage)            |
+| [Overview](@ref index)    | [Memory - decoder](@ref mempage)  |
  
 </div>

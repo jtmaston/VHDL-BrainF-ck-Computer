@@ -6,10 +6,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity addressdecoder_tb is
+entity AddressDecoder_tb is
 end entity;
 
-architecture behavior of addressdecoder_tb is
+architecture behavior of AddressDecoder_tb is
     constant testCellCount    : positive    := 8;
     
     signal clock              : std_logic   := '0';                                                    -- Clock pulse on which the mux does the switching
